@@ -8,11 +8,11 @@ import sys
 
 def setup(app):
     """
-    Setup function used by sphinx, when loading sphinxodoo as sphinx extension
+    Setup function used by sphinx, when loading sphinxodooautodoc as sphinx extension
     """
-    app.add_config_value('sphinxodoo_addons', [], True)
-    app.add_config_value('sphinxodoo_root_path', '', True)
-    app.add_config_value('sphinxodoo_addons_path', [], True)
+    app.add_config_value('sphinxodooautodoc_addons', [], True)
+    app.add_config_value('sphinxodooautodoc_root_path', '', True)
+    app.add_config_value('sphinxodooautodoc_addons_path', [], True)
     app.connect('builder-inited', load_modules)
 
     return {'version': '0.3.3'}
@@ -40,11 +40,11 @@ def load_modules(app):
             setattr(getattr(odoo.addons, module_name),
                     '__doc__', info['description'])
 
-    addons = app.env.config.sphinxodoo_addons
-    addons_path = ','.join(app.env.config.sphinxodoo_addons_path)
+    addons = app.env.config.sphinxodooautodoc_addons
+    addons_path = ','.join(app.env.config.sphinxodooautodoc_addons_path)
 
-    if(app.env.config.sphinxodoo_root_path):
-        sys.path.append(app.env.config.sphinxodoo_root_path)
+    if(app.env.config.sphinxodooautodoc_root_path):
+        sys.path.append(app.env.config.sphinxodooautodoc_root_path)
     try:
         import odoo
     except ImportError:

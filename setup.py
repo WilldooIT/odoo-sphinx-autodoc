@@ -22,22 +22,22 @@
 #
 ##############################################################################
 
-from distutils.core import setup
+from setuptools import setup
 
 setup(
-    name='odoo-sphinx-autodoc',
+    name='sphinx-odoo-autodoc',
     version='0.3.3',
     author='Sylvain Garancher',
     author_email='sylvain.garancher@syleam.fr',
     packages=[
-        'sphinxodoo',
-        'sphinxodoo.ext',
+        'sphinxodooautodoc',
+        'sphinxodooautodoc.ext',
     ],
     package_data={},
     scripts=[],
-    #url='',
+    url='https://github.com/nseinlet/odoo-sphinx-autodoc',
     license='LICENSE.txt',
-    description='Sphinx extension to use autodoc on openerp.addons.*',
+    description='Sphinx extension to use autodoc on odoo.addons.*',
     long_description=open('README.txt').read(),
     requires=[
         'sphinx',
