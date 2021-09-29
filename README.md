@@ -13,7 +13,7 @@ Options
 Authors
 =======
 
-Original work by Sylvain Garancher (sylvain.garancher@syleam.fr)
+Original work by Sylvain Garancher (sylvain.garancher@syleam.fr)  
 Fork maintained by WilldooIT Ltd (https://www.willdooit.com/)
 
 
